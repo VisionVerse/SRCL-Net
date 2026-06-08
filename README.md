@@ -24,9 +24,6 @@ Fog interference usually weakens structural cues of real changed regions and ind
 
 CDRNet consists of the following components:
 
-- **Weight-sharing PVT-v2-B2 Backbone**  
-  Extracts hierarchical bi-temporal features from two temporal remote sensing images.
-
 - **Structural Cue Compensation Module (SCCM)**  
   Compensates fog-weakened structural cues through spatial semantic preservation and wavelet-domain structural modeling.
 
