@@ -215,7 +215,7 @@ If you find this repository useful, please consider citing our paper:
 
 
 ## Acknowledgement
-Thanks to the authors of remote sensing change detection for their excellent work！
+:clap::clap::clap: Thanks to the authors of remote sensing change detection for their excellent work！
 
 
 
