@@ -110,7 +110,7 @@ The new foggy RSCD datasets can be obtained from the [Cloud Drive](https://pan.j
 Please organize the dataset as follows:
 
 ```text
-Dataset/
+Foggy RSCD Dataset/
 ├── train/
 │   ├── T1/
 │   ├── T2/
@@ -145,8 +145,8 @@ The ground-truth mask should follow:
 Modify the dataset path and training configuration in `train_v2.py`, then run:
 
 ```bash
-python train_v2.py \
-  --data_name LEVIR-CD-HTC136_v10 \
+python train.py \
+  --data_name foggy-LEVIR-CD \
   --epoch 200 \
   --batchsize 8 \
   --trainsize 256 \
@@ -181,8 +181,8 @@ After training, run:
 
 ```bash
 python test.py \
-  --data_name LEVIR-CD-HTC136_v10 \
-  --model_path ./train_output/CDRNet/LEVIR-CD-HTC136_v10/Seg_epoch_best.pth
+  --data_name foggy-LEVIR-CD \
+  --model_path ./train_output/CDRNet/foggy-LEVIR-CD/Seg_epoch_best.pth
 ```
 
 The predicted change maps will be saved in the configured output directory.
