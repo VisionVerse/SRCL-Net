@@ -123,8 +123,8 @@ Foggy RSCD Dataset/
 
 Each sample contains:
 
-- `T1`: image at the first time point
-- `T2`: image at the second time point
+- `A`: image at the first time point
+- `B`: image at the second time point
 - `GT`: binary change mask
 
 The ground-truth mask should follow:
