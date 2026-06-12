@@ -75,8 +75,8 @@ Please install a PyTorch version compatible with your CUDA version.
 A typical environment includes:
 
 ```text
-python >= 3.8
-torch >= 1.10
+python >= 3.10
+torch >= 2.10
 torchvision
 numpy
 opencv-python
