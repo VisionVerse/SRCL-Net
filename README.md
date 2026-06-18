@@ -1,4 +1,4 @@
-# CDRNet: Change Discriminability Restoration Network for Foggy Remote Sensing Change Detection
+# SRCL-Net: Structure-Compensated Reliable Change Learning for Foggy Remote Sensing Change Detection
 
 
 <p align="center">
@@ -12,7 +12,7 @@
 
 ## :pushpin: Introduction
 
-This repository provides the implementation of a **Change Discriminability Restoration Network (CDRNet)** for **foggy remote sensing change detection**.
+This repository provides the implementation of a **Structure-Compensated Reliable Change Learning Network (SRCL-Net)** for **foggy remote sensing change detection**.
 
 Fog interference usually weakens structural cues of real changed regions and induces pseudo-change responses in unchanged backgrounds. To address this issue, CDRNet restores change discriminability by compensating fog-weakened structural cues and disentangling fog-induced pseudo-change responses during progressive change decoding.
 
@@ -30,7 +30,7 @@ CDRNet consists of the following components:
 - **Structural Edge Guidance (SEG)**  
   Aggregates multi-scale structure-enhanced features to generate edge guidance for boundary-aware decoding.
 
-- **Fog-induced Pseudo-change Disentanglement Module (FPDM)**  
+- **Fog-induced Pseudo-change Suppression Module (FPSM)**  
   Suppresses fog-induced pseudo-change responses and progressively decodes reliable changed regions.
 
 ---
@@ -62,7 +62,7 @@ CDRNet/
 
 
 ```bash
-git clone https://github.com/your-username/CDRNet.git
+git clone https://github.com/your-username/SRCL-Net.git
 cd CDRNet
 
 conda create -n cdrnet python=3.8
@@ -166,7 +166,7 @@ Main options:
 The trained model will be saved to:
 
 ```text
-./train_output/CDRNet/{data_name}/
+./train_output/SRCL-Net/{data_name}/
 ```
 
 
@@ -178,7 +178,7 @@ After training, run:
 ```bash
 python test.py \
   --data_name foggy-LEVIR-CD \
-  --model_path ./train_output/CDRNet/foggy-LEVIR-CD/Seg_epoch_best.pth
+  --model_path ./train_output/SRCL-Net/foggy-LEVIR-CD/Seg_epoch_best.pth
 ```
 
 The predicted change maps will be saved in the configured output directory.
@@ -191,7 +191,7 @@ If you find this repository useful, please consider citing our paper:
 
 ```bibtex
 @article{cdrnet2026,
-  title={Change Discriminability Restoration Network for Foggy Remote Sensing Change Detection},
+  title={Structure-Compensated Reliable Change Learning for Foggy Remote Sensing Change Detection},
   author={},
   journal={},
   year={2026}
