@@ -42,7 +42,7 @@ CDRNet/
 ├── network/
 │   ├── CDRNet.py
 │   ├── SCC.py
-│   ├── FPD.py
+│   ├── FPS.py
 │   ├── Edge.py
 │   ├── cd_tools.py
 │   └── backbones/
@@ -54,7 +54,7 @@ CDRNet/
 ├── pretrained_model/
 │   └── pvt_v2_b2.pth
 ├── figures/
-│   └── CDRNet_framework.png
+│   └── SRCL-Net_framework.jpg
 ├── train.py
 ├── requirements.txt
 └── README.md
