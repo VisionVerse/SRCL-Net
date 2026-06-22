@@ -54,7 +54,7 @@ SRDL-Net/
 ├── pretrained_model/
 │   └── pvt_v2_b2.pth
 ├── figures/
-│   └── SRDL-Net_framework.jpg
+│   └── framework.jpg
 ├── train.py
 ├── requirements.txt
 └── README.md
