@@ -1,4 +1,4 @@
-# SRCL-Net: Structure-Compensated Reliable Change Learning for Foggy Remote Sensing Change Detection
+# SRDL-Net: Structure-Compensated Reliable Discriminability Learning for Foggy Remote Sensing Change Detection
 
 
 <p align="center">
@@ -12,17 +12,17 @@
 
 ## :pushpin: Introduction
 
-This repository provides the implementation of a **Structure-Compensated Reliable Change Learning Network (SRCL-Net)** for **foggy remote sensing change detection**.
+This repository provides the implementation of a **Structure-Compensated Reliable Discriminability Learning Network (SRDL-Net)** for **foggy remote sensing change detection**.
 
-Fog interference usually weakens structural cues of real changed regions and induces pseudo-change responses in unchanged backgrounds. To address this issue, SRCL-Net restores change discriminability by compensating fog-weakened structural cues and disentangling fog-induced pseudo-change responses during progressive change decoding.
+Fog interference usually weakens structural cues of real changed regions and induces pseudo-change responses in unchanged backgrounds. To address this issue, SRDL-Net restores change discriminability by compensating fog-weakened structural cues and disentangling fog-induced pseudo-change responses during progressive change decoding.
 
 
 
 <p align="center">
-  <img src="figures/SRCL-Net_framework.jpg" width="900">
+  <img src="figures/framework.jpg" width="900">
 </p>
 
-SRCL-Net consists of the following components:
+SRDL-Net consists of the following components:
 
 - **Structural Cue Compensation Module (SCCM)**  
   Compensates fog-weakened structural cues through spatial semantic preservation and wavelet-domain structural modeling.
@@ -38,9 +38,9 @@ SRCL-Net consists of the following components:
 ## :rocket: Installation
 
 ```text
-SRCL-Net/
+SRDL-Net/
 ├── network/
-│   ├── SRCL-Net.py
+│   ├── SRDL-Net.py
 │   ├── SCC.py
 │   ├── FPS.py
 │   ├── Edge.py
@@ -54,7 +54,7 @@ SRCL-Net/
 ├── pretrained_model/
 │   └── pvt_v2_b2.pth
 ├── figures/
-│   └── SRCL-Net_framework.jpg
+│   └── SRDL-Net_framework.jpg
 ├── train.py
 ├── requirements.txt
 └── README.md
@@ -62,8 +62,8 @@ SRCL-Net/
 
 
 ```bash
-git clone https://github.com/your-username/SRCL-Net.git
-cd SRCL-Net
+git clone https://github.com/your-username/SRDL-Net.git
+cd SRDL-Net
 
 conda create -n ournet python=3.8
 conda activate ournet
@@ -89,7 +89,7 @@ Pillow
 
 
 
-SRCL-Net adopts **PVT-v2-B2** as the weight-sharing backbone. 
+SRDL-Net adopts **PVT-v2-B2** as the weight-sharing backbone. 
 Please download the pretrained PVT-v2-B2 model and place it under:
 
 ```text
@@ -166,7 +166,7 @@ Main options:
 The trained model will be saved to:
 
 ```text
-./train_output/SRCL-Net/{data_name}/
+./train_output/SRDL-Net/{data_name}/
 ```
 
 
@@ -178,7 +178,7 @@ After training, run:
 ```bash
 python test.py \
   --data_name foggy-LEVIR-CD \
-  --model_path ./train_output/SRCL-Net/foggy-LEVIR-CD/Seg_epoch_best.pth
+  --model_path ./train_output/SRDL-Net/foggy-LEVIR-CD/Seg_epoch_best.pth
 ```
 
 The predicted change maps will be saved in the configured output directory.
@@ -190,8 +190,8 @@ The predicted change maps will be saved in the configured output directory.
 If you find this repository useful, please consider citing our paper:
 
 ```bibtex
-@article{srcl2026zhou,
-  title={Structure-Compensated Reliable Change Learning for Foggy Remote Sensing Change Detection},
+@article{srdl2026zhou,
+  title={Structure-Compensated Reliable Discriminability Learning for Foggy Remote Sensing Change Detection},
   author={},
   journal={},
   year={2026}
